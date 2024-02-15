@@ -1,14 +1,21 @@
-import About from "@/components/About";
-import Counters from "@/components/Counters";
-import Skills from "@/components/Skills";
+import React from "react";
 import Image from "next/image";
-import Footer from "@/components/Footer";
 
-export default function Home() {
+function About() {
   return (
-    <main className="bg-transparent ml-40">
-      <div className="flex gap-10  h-screen w-full bg-purple bg-no-repeat bg-cover items-center">
-      <div className=" text-white w-1/2 flex justify-center flex-col items-start text-black p-10 ">
+    <div className="flex gap-10  h-screen w-full bg-purple bg-no-repeat bg-cover justify-center items-center">
+      <Image
+        src="/images/bro.jpg"
+        className="h-[70%] object-cover rounded-lg"
+        width={400}
+        height={100}
+        alt="gym-bro"
+      />
+      <div className="bg-white rounded-2xl w-40 h-16  flex  gap-3 justify-center items-center relative bottom-40 right-20">
+        <h3 className="text-5xl font-semibold text-orange-400"> 12 </h3>
+        <h4>Year experiance</h4>
+      </div>
+      <div className="text-white w-1/2 flex justify-center flex-col items-start text-black p-10 ">
         <h2 className="text-[40px]">Hello I'm</h2>
         <h1 className="text-[60px] font-bold">Dev </h1>
         <h3 className="text-[20px] font-semibold">
@@ -25,15 +32,8 @@ export default function Home() {
           <button>About</button>
         </div>
       </div>
-      <Image src='/images/bro.jpg' className="h-[70%] object-cover rounded-lg" width={400} height={100} alt="gym-bro"/>
-
-     
     </div>
-
-    <Skills/>
-    <About/>
-    <Counters/>
-    <Footer/>
-    </main>
   );
 }
+
+export default About;
